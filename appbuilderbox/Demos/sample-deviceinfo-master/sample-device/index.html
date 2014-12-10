@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Local Storage Sample</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="styles/main.css" />
+		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/main.js"></script>
+	</head>
+	<body>
+		<header class="header">
+			<h1>Device Info Sample</h1>
+		</header>
+		<div class="content">
+            <div class="action-area ch70">
+                <button class="button dh" id="deviceName">Device Name</button>
+				<button class="button dh" id="deviceCordovaVersion">Cordova version</button>
+                <button class="button dh" id="devicePlatform">Device patform</button>
+				<button class="button dh" id="deviceUUID">Device UUID</button>
+                <button class="button dh" id="deviceVersion">Device version</button>
+			</div>
+            <div class="result-area ch30">
+                <div class="results">
+                   <div id="infoField" class="desc" type="text" readonly="readonly"></div> 
+                </div>
+                <div class="separator"></div>
+			</div>			
+		</div>
+	</body>
+	<footer class="footer">
+		<div>Cordova API Samples</div>
+	</footer>
+</html>

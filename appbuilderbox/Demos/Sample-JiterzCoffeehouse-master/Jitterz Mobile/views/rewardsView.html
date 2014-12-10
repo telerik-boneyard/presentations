@@ -1,0 +1,29 @@
+<div id="rewardsView" 
+     data-role="view" data-style="inset" 
+     data-title="Rewards" data-init="rewardsViewInit" 
+     data-model="cardsViewModel">
+
+    <ul id="rewordsCardsList" 
+        data-role="listview" data-style="inset" 
+        data-bind="source: cards" data-template="rewordsCardsList-template">
+    </ul>
+</div>
+
+<script type="text/x-kendo-template" id="rewordsCardsList-template">
+    <a href='views/rewardCardView.html?bonusPoints=#:bonusPoints#&cardNumber=#:cardNumber#' 
+       data-cardId="#:cardNumber#" data-role="listview-link" class="j-listview-item">
+        <div 
+            #if (bonusPoints < 50) {#
+                class="j-icon silver-badge"
+            #}else {#
+                class="j-icon golden-badge"
+            #}
+            
+            #>
+        </div>
+        <div class="j-listview-item-content">
+            <span>Card Number: #:cardNumber#</span>
+            <span>Expires On: #:expireDate#</span>
+        </div>
+    </a>
+</script>

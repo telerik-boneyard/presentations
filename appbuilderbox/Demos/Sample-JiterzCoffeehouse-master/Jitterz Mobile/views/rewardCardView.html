@@ -1,0 +1,43 @@
+<div data-role="view" id="rewardCard" data-style="inset"  data-title="Reward Card" data-show="rewardCardShow" data-init="rewardCardInit" data-model="rewardsViewModel">
+    <header data-role="header" data-id="jitterz-default-header">
+        <div data-role="navbar">
+            <a class="nav-button" data-role="backbutton" data-align="left">Back</a>
+            <span data-role="view-title"></span>
+        </div>
+    </header>
+    <div>
+        <div id="rewardCardFront" data-bind="attr: {class: cardStatus}">
+            <div class="card-icon">
+                <div class="j-icon main-badge"></div>
+            </div>
+            <div class="card-bonus">
+                <span data-bind="text: bonusPoints"></span>
+                <div>
+                    <span>as of</span>
+                    <span data-bind="text: currentDate"></span>
+                </div>
+            </div>
+            <div class="card-line">
+                <span data-bind="text: cardNumber"></span>
+            </div>
+        </div>
+        <div id="rewardCardBack" data-bind="attr: {class: cardStatus}">
+            <img id="barcodeImage" data-bind="attr: {src:barcodeURL}" alt="Shop Card Id"/>
+        </div>
+        <ul id="rewardsList" 
+            data-role="listview" data-style="inset" data-bind="source: rewards" data-style="inset"
+            data-template="rewardsListTemplate">
+        </ul>
+    </div>
+</div>
+
+<!-- Templates -->
+<script id="rewardsListTemplate" type="text/x-kendo-template">
+    <div class="j-listview-item rewards">
+        <div class="j-icon reward-badge"></div>
+        <div class="j-listview-item-content">
+            <span>#:reward#</span>
+            <span>Reward</span>
+        </div>
+    </div>
+</script>

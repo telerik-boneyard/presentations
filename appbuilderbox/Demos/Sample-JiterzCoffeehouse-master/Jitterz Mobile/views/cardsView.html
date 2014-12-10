@@ -1,0 +1,34 @@
+<div id="cardsView" 
+     data-role="view" data-style="inset" 
+     data-title="Cards" data-init="listViewCardsInit" 
+     data-model="cardsViewModel">
+    <header data-role="header">
+        <div data-role="navbar">
+            <a id="buttonAddNewCard" data-role="button" href="views/addCardView.html" data-align="right">Add</a>
+            <span data-role="view-title"></span>
+        </div>
+    </header>
+    <ul id="cardsList" 
+        data-role="listview" data-style="inset" 
+        data-bind="source: cards" data-template="cardsListTemplate">
+    </ul>
+</div>
+
+<script id="cardsListTemplate" type="text/x-kendo-template">
+    <a  href='views/singleCardView.html?bonusPoints=#:bonusPoints#&cardNumber=#:cardNumber#&cardAmount=#:amount#'
+        data-cardId="#:cardNumber#" data-role="listview-link" class="j-listview-item">
+        <div 
+            #if (bonusPoints < 50) {#
+                class="j-icon silver-badge"
+            #}else {#
+                class="j-icon golden-badge"
+            #}
+            
+            #>
+        </div>
+        <div class="j-listview-item-content">
+            <span>Card Number: #:cardNumber#</span>
+            <span>Expires On: #:expireDate#</span>
+        </div>
+    </a>
+</script>

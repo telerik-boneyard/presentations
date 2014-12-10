@@ -1,0 +1,20 @@
+<div data-role="view" id="addCardView" data-title="Add New Card" data-show="onAddCardViewShow" data-model="addCardViewModel">
+    <div data-role="header">
+        <div data-role="navbar">
+            <a href="#cardsView" data-role="button" data-align="left">Cancel</a>
+            <span data-role="view-title"></span>
+            <button data-role="button" data-align="right" id="buttonAddNewCardView" class="isCardValid" data-bind="events: { click: addNewCard }">Add</button>
+        </div>
+    </div>
+    <div>
+        <ul class="addNewCardWrapper" data-role="listview" data-style="inset">
+            <li>
+                <label>
+                    Card Number
+                    <input id="cardNumberField" type="number" min="1" max="999999999" maxlength="9" data-bind="value: cardNumber, events: { keyup: cardIdChanged }"/>
+                </label>
+            </li>
+        </ul>
+        <div id="addNewCardErrorLog"></div>
+    </div>
+</div>

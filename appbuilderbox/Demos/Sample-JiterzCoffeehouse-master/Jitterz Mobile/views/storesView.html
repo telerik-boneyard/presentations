@@ -1,0 +1,29 @@
+<div id="stores" 
+     data-role="view" data-title="Stores" data-style="inset"
+     data-init="storesInit" data-show="onStoresShow"
+     data-model="storesListViewModel">
+    <header data-role="header">
+        <div data-role="navbar">
+            <ul id="btnStoreViewToggle" data-role="buttongroup" data-index="0" data-align="center">
+                <li>Map</li>
+                <li>List</li>
+            </ul>
+        </div>
+    </header>
+    <div id="storesContent">
+        <div id="map"></div>
+        <ul id="storeList" data-role="listview" data-style="inset" style="display:none"
+            data-template="tmplStoreListItem" data-bind="source: stores">
+        </ul>
+    </div>
+    <span id="offline">Please reconnect to Internet.</span>
+</div>
+
+<script id="tmplStoreListItem" type="text/x-kendo-template">
+    <div class="j-listview-item stores">
+        <div class="j-listview-item-content">
+            <span>#: Name #</span>
+            <span>#: Address #</span>
+        </div>
+    </div>
+</script>
