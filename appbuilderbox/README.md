@@ -5,11 +5,11 @@ Telerik AppBuilder
 
 ### /// You’re Awesome!
 
-Welcome to the home of Telerik AppBuilder Presentation-in-a-Box. If you’re into cross-platform hybrid mobile development, you will love the tooling and all of the services we have for you. Passionate about mobile and want to present to an audience? We’re here to help and appreciate your awesomeness!
+Passionate about mobile and want to spread the excitement about Telerik Platform? We’re here to help and appreciate your awesomeness!
 
 ### /// What’s in the Box?
 
-Here’s what you’ll find in our GitHub Repo – use it all or just pick the pieces you need:
+This is a "presentation in a box" - The idea is that you'll find everything you need for presentations of any size or shape. Here’s what you’ll find in our GitHub Repo – use it all or just pick the pieces you need:
 
 * Guides – Let us provide some presentation pointers; you can also roll on your own
 * Slide Decks – HTML 5 web-based ones, PDFs or PowerPoints to suit your needs
@@ -23,9 +23,7 @@ If you have a short amount of time to do a lightning talk on x-plat hybrid mobil
 * Explain where Telerik AppBuilder fits with hybrid mobile development
 * Showcase tooling through flexibility of IDEs
 * Stick to the slide decks entirely and walk through options
-* Alternatively, jump out of deck and show some live demos
-* Cover In-browser client, CLI and Sublime Text integration
-* Alternatively, cover Visual Studio client based on audience
+* Cover In-browser client, (Pick One: CLI, Sublime Text, Visual Studio) IDE integration
 * Show quick build/deployment using Companion app and QR code scanner
 * Mention Plugins Marketplace
 * Highlight flexibility and wrap-up
@@ -58,6 +56,8 @@ Whoah .. that’s some serious talking time! Take your time to run through the d
 
 ### /// Have fun
 Hopefully, you enjoy building x-plat hybrid mobile apps as much as we do and see where Telerik AppBuilder provides all the tooling needed for success. And we hope this content allows you to share the love! Got something cool to contribute back? We love it – just make a Pull request for us to take a look.
+
+And remember: You're awesome. We mean that.
 
 Sincerely
 
