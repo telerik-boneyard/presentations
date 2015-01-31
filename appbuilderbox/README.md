@@ -1,29 +1,19 @@
 Telerik AppBuilder
 ==========
 
-#### Presentation in a Box .. You'll love this!
+#### Presentation-In-a-Box .. You'll enjoy this.
 
-### /// You’re Awesome!
-
-Passionate about mobile and want to spread the excitement about Telerik Platform? We’re here to help and appreciate your awesomeness!
-
-### /// What’s in the Box?
-
-This is a "presentation in a box" - The idea is that you'll find everything you need for presentations of any size or shape. Here’s what you’ll find in our GitHub Repo – use it all or just pick the pieces you need:
-
-* Guides – Let us provide some presentation pointers; you can also roll on your own
-* Slide Decks – HTML 5 web-based ones, PDFs or PowerPoints to suit your needs
-* Demos – Selected showcase apps for easy presentations in your chosen IDE
+Everything you need to present on Telerik AppBuilder - nicely wrapped up in a box. Showcases features and highlights tooling for an easy conversation with developers.
 
 ### /// 20 Minute Cameo
 
-If you have a short amount of time to do a lightning talk on x-plat hybrid mobile development and Telerik AppBuilder, here’s what we think are the most important points to cover:
+If you have a short amount of time to do a lightning talk on X-platform hybrid mobile development and Telerik AppBuilder, here’s what we think are the most important points to hit:
 
 * Quickly explain mobile strategies (mobile web, native or hybrid)
 * Explain where Telerik AppBuilder fits with hybrid mobile development
 * Showcase tooling through flexibility of IDEs
 * Stick to the slide decks entirely and walk through options
-* Cover In-browser client, (Pick One: CLI, Sublime Text, Visual Studio) IDE integration
+* Cover In-browser client, Then pick one (from: CLI, Sublime Text, Visual Studio) IDE integration
 * Show quick build/deployment using Companion app and QR code scanner
 * Mention Plugins Marketplace
 * Highlight flexibility and wrap-up
@@ -51,14 +41,12 @@ Ah, the comfort zone of a regular User Group or Conference session! Here’s wha
 * Show Plugins Marketplace and show integration in IDEs
 * Highlight flexibility of tooling & wrap up
 
-### /// Got more than an Hour?
-Whoah .. that’s some serious talking time! Take your time to run through the deck & showcase all the IDEs. You could use one or more of the demos as starting point for some hands-on workshop time. Alternatively, please feel free to ping any of the Telerik DevRel advocates – it’s what we do. Here’s how to get hold of us - [@burkeholland](https://twitter.com/burkeholland) | [@mbcrump](https://twitter.com/mbcrump) | [@samidip](https://twitter.com/samidip) | [@tjvantoll](https://twitter.com/tjvantoll) | [@jenlooper](https://twitter.com/jenlooper) | [@johnbristowe](https://twitter.com/johnbristowe) | [@codylindley](https://twitter.com/codylindley) | [@sebawita](https://twitter.com/sebawita) | [@kashyapa](https://twitter.com/kashyapa).
-
 ### /// Have fun
-Hopefully, you enjoy building x-plat hybrid mobile apps as much as we do and see where Telerik AppBuilder provides all the tooling needed for success. And we hope this content allows you to share the love! Got something cool to contribute back? We love it – just make a Pull request for us to take a look.
 
-And remember: You're awesome. We mean that.
+Hope you enjoy building X-platform hybrid mobile apps as much as we do. Telerik AppBuilder provides mobile developers end-to-end tooling for success and hopefully, this presentation-in-a-box content helps you share your passion.
+
+And remember - you're awesome. We mean that.
 
 Sincerely
 
-The Telerik Developer Relations Team!
+The Telerik Developer Relations Team
