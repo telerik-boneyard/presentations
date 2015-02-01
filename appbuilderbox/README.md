@@ -43,7 +43,7 @@ Ah, the comfort zone of a regular User Group or Conference session! Here’s wha
 
 ### /// Have fun
 
-Hope you enjoy building X-platform hybrid mobile apps as much as we do. Telerik AppBuilder provides mobile developers end-to-end tooling for success and hopefully, this presentation-in-a-box content helps you share your passion.
+Hope you enjoy building X-platform hybrid mobile apps as much as we do. Telerik AppBuilder provides mobile developers end-to-end tooling for success and hopefully, this presentation-in-a-box content helps you share your passion for AppBuilder.
 
 And remember - you're awesome. We mean that.
 
