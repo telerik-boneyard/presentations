@@ -1,4 +1,4 @@
-AppBuilder Slide Deck
+AppBuilder Slide Decks
 ==========
 
 
