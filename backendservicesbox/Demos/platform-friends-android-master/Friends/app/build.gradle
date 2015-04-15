@@ -1,0 +1,52 @@
+apply plugin: 'android'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion '19.1.0'
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 19
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+
+        android {
+            lintOptions {
+                checkReleaseBuilds false
+                // Or, if you prefer, you can continue to check for errors in release builds,
+                // but continue the build even when errors are found:
+                abortOnError false
+            }
+        }
+    }
+    productFlavors {
+        production {
+        }
+        testing {
+        }
+    }
+
+    // The Android Gradle Plugin does not merge the instrumentation tag properly via sourceSets,
+    // otherwise we would use that. Therefor, this code ensures that a unique manifest is used
+    // for the 'testing' flavor.
+    android.applicationVariants.all { variant ->
+        if (variant.flavorName == "testing") {
+            variant.processResources.manifestFile = file('src/' + variant.flavorName + '/AndroidManifest.xml')
+            variant.processManifest.enabled=false
+        }
+    }
+}
+
+dependencies {
+    compile files('libs/AndroidSDK.jar')
+    compile files('libs/google-play-services.jar')
+    compile files('libs/LiveSDK-for-Android-master.jar')
+    compile project(':facebook')
+    compile files('libs/analyticsmonitor.jar')
+    testingCompile files('libs/MobileTestingExtension.jar')
+}

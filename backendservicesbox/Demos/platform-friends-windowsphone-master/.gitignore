@@ -1,0 +1,6 @@
+# Build output files
+bin/
+obj/
+# Local solution settings files
+*.suo
+*.user

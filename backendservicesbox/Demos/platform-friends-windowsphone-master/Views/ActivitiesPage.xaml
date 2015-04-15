@@ -1,0 +1,60 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Telerik.Windows.Controls.Cloud.Sample.Views.ActivitiesPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikCloud="clr-namespace:Telerik.Windows.Controls.Cloud;assembly=Telerik.Windows.Controls.Cloud"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="BACKEND SERVICES SAMPLE" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="activities" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <telerikCloud:RadCloudJumpList x:Name="activities" EmptyContent="currently there are no activities">
+                <telerikCloud:RadCloudJumpList.EmptyContentTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" Foreground="{StaticResource PhoneSubtleBrush}" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                    </DataTemplate>
+                </telerikCloud:RadCloudJumpList.EmptyContentTemplate>
+                <telerikCloud:RadCloudJumpList.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Tap="StackPanel_Tap" Margin="0 0 0 20">
+                            <TextBlock Text="{Binding AuthorName}" FontSize="{StaticResource PhoneFontSizeMedium}" Foreground="{StaticResource PhoneAccentBrush}" />
+                            <TextBlock Text="{Binding CreatedDate}" FontSize="16" Foreground="{StaticResource PhoneSubtleBrush}" VerticalAlignment="Bottom" />
+                            <TextBlock Text="{Binding Text}" FontSize="{StaticResource PhoneFontSizeSmall}" TextWrapping="Wrap" FontStyle="Italic" Margin="0 8 0 0" />
+                            <Image Stretch="Uniform" Margin="0 8 0 0" Source="{Binding PictureFileUri}" />
+                            <TextBlock Text="{Binding CommentsCountString}" Margin="0 8 0 0" FontSize="16" Foreground="{StaticResource PhoneSubtleBrush}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </telerikCloud:RadCloudJumpList.ItemTemplate>
+            </telerikCloud:RadCloudJumpList>
+        </Grid>
+    </Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton x:Name="AddActivityButton" IconUri="/Images/appbar_add.png" Text="share" Click="AddActivityButton_Click" />
+            <shell:ApplicationBarIconButton x:Name="RefreshActivitiesButton" IconUri="/Images/appbar_refresh.png" Text="refresh" Click="RefreshActiviesButton_Click" />
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+    
+</phone:PhoneApplicationPage>

@@ -1,0 +1,70 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Telerik.Windows.Controls.Cloud.Sample.Views.CreateOrEditActivityPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:localControls="clr-namespace:Telerik.Windows.Controls.Cloud.Sample.UserControls"
+    xmlns:telerikCloud="clr-namespace:Telerik.Windows.Controls.Cloud;assembly=Telerik.Windows.Controls.Cloud"
+    xmlns:telerikPrimitives="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Primitives"
+    xmlns:telerikInput="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Input"
+    xmlns:telerikDataForm="clr-namespace:Telerik.Windows.Controls.DataForm;assembly=Telerik.Windows.Controls.Input"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="BACKEND SERVICES SAMPLE" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="share activity" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <telerikCloud:RadCloudDataForm
+                CommittingDataFieldAsync="objectBrowser_CommittingDataFieldAsync"
+                Success="objectBrowser_Success"
+                Failed="objectBrowser_Failed"
+                VerticalAlignment="Stretch"
+                x:Name="objectBrowser">
+                <Grid>
+                    <telerikInput:DataField TargetProperty="Text" Header="What's up?">
+                        <telerikInput:DataField.EditorStyles>
+                            <Style TargetType="telerikPrimitives:RadTextBox">
+                                <Setter Property="AcceptsReturn" Value="True"/>
+                            </Style>
+                        </telerikInput:DataField.EditorStyles>
+                    </telerikInput:DataField>
+                    <telerikInput:DataField TargetProperty="PictureFileId" Header="Image">
+                        <telerikInput:DataField.CustomEditor>
+                            <telerikDataForm:CustomEditor>
+                                <localControls:PictureSelector 
+                                    telerikDataForm:CustomDataField.IsEditor="True" 
+                                    telerikDataForm:CustomDataField.EditorValuePath="PictureFileId" 
+                                    Height="200"/>
+                            </telerikDataForm:CustomEditor>
+                        </telerikInput:DataField.CustomEditor>
+                    </telerikInput:DataField>
+                </Grid>
+                <telerikCloud:RadCloudDataForm.ApplicationBarInfo>
+                    <telerikPrimitives:ApplicationBarInfo>
+                        <telerikPrimitives:ApplicationBarButton IconUri="/Images/appbar_ok.png" Text="share" x:Name="okButton" Click="okButton_Click"/>
+                    </telerikPrimitives:ApplicationBarInfo>
+                </telerikCloud:RadCloudDataForm.ApplicationBarInfo>
+            </telerikCloud:RadCloudDataForm>
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

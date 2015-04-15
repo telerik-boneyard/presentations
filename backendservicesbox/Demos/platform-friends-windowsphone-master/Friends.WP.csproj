@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8AC2688A-D46B-4D17-A90F-9FF7C4BF9474}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Telerik.Windows.Controls.Cloud.Sample</RootNamespace>
+    <AssemblyName>Telerik.Windows.Controls.Cloud.Sample</AssemblyName>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>Telerik.Windows.Controls.Cloud.Sample_$(Configuration)_$(Platform).xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>Telerik.Windows.Controls.Cloud.Sample.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|ARM' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\ARM\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|ARM' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectionSettings.cs" />
+    <Compile Include="Converters\IntToVisibilityConverter.cs" />
+    <Compile Include="Converters\StringToUpperConverter.cs" />
+    <Compile Include="Helpers\NavigationHelper.cs" />
+    <Compile Include="Helpers\UIHelper.cs" />
+    <Compile Include="LocalizedStrings.cs" />
+    <Compile Include="Model\Activity.cs" />
+    <Compile Include="Model\Comment.cs" />
+    <Compile Include="Model\CustomUser.cs" />
+    <Compile Include="Model\GenderEnum.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\AppResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PictureSelector.xaml.cs">
+      <DependentUpon>PictureSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ActivitiesPage.xaml.cs">
+      <DependentUpon>ActivitiesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateAccountPage.xaml.cs">
+      <DependentUpon>CreateAccountPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateOrEditActivityPage.xaml.cs">
+      <DependentUpon>CreateOrEditActivityPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateOrEditCommentPage.xaml.cs">
+      <DependentUpon>CreateOrEditCommentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FriendsPage.xaml.cs">
+      <DependentUpon>FriendsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainMenuPage.xaml.cs">
+      <DependentUpon>MainMenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewActivityPage.xaml.cs">
+      <DependentUpon>ViewActivityPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewModel\MenuItem.cs" />
+    <Compile Include="Views\ViewProfilePage.xaml.cs">
+      <DependentUpon>ViewProfilePage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\AlignmentGrid.png" />
+    <Content Include="Assets\ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileMedium.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileMediumLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\appbar_add.png" />
+    <Content Include="Images\appbar_comment.png" />
+    <Content Include="Images\appbar_delete.png" />
+    <Content Include="Images\appbar_edit.png" />
+    <Content Include="Images\appbar_like.png" />
+    <Content Include="Images\appbar_login.png" />
+    <Content Include="Images\appbar_logout.png" />
+    <Content Include="Images\appbar_ok.png" />
+    <Content Include="Images\appbar_refresh.png" />
+    <Content Include="Images\appbar_search.png" />
+    <Content Include="Images\appbar_settings.png" />
+    <Content Include="Images\appbar_unlike.png" />
+    <Content Include="Images\DateTimePickerCancel.png" />
+    <Content Include="Images\DateTimePickerOK.png" />
+    <Content Include="Images\menu_activities.png" />
+    <Content Include="Images\menu_friends.png" />
+    <Content Include="Images\menu_profile.png" />
+    <Content Include="Images\menu_settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="UserControls\PictureSelector.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ActivitiesPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CreateAccountPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CreateOrEditActivityPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CreateOrEditCommentPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\FriendsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\LoginPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainMenuPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ViewActivityPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ViewProfilePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AnalyticsMonitorWP7">
+      <HintPath>lib\Eqatec\AnalyticsMonitorWP7.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Data">
+      <HintPath>lib\Telerik.Windows.Controls.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Input">
+      <HintPath>lib\Telerik.Windows.Controls.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Primitives">
+      <HintPath>lib\Telerik.Windows.Controls.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Core">
+      <HintPath>lib\Telerik.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Storage.Extensions" Condition=" '$(Platform)' == 'ARM' ">
+      <HintPath>lib\ARM\Telerik.Storage.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Storage.Extensions" Condition=" '$(Platform)' == 'x86' ">
+      <HintPath>lib\x86\Telerik.Storage.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Storage_WP" Condition=" '$(Platform)' == 'ARM' ">
+      <HintPath>lib\ARM\Telerik.Storage_WP.winmd</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Storage_WP" Condition=" '$(Platform)' == 'x86' ">
+      <HintPath>lib\x86\Telerik.Storage_WP.winmd</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" Condition=" '$(Platform)' == 'ARM' ">
+      <HintPath>lib\ARM\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" Condition=" '$(Platform)' == 'x86' ">
+      <HintPath>lib\x86\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Everlive.Sdk" Condition=" '$(Platform)' == 'ARM' ">
+      <HintPath>lib\ARM\Telerik.Everlive.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Everlive.Sdk" Condition=" '$(Platform)' == 'x86' ">
+      <HintPath>lib\x86\Telerik.Everlive.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Core.Cloud" Condition=" '$(Platform)' == 'ARM' ">
+      <HintPath>lib\ARM\Telerik.Windows.Core.Cloud.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Core.Cloud" Condition=" '$(Platform)' == 'x86' ">
+      <HintPath>lib\x86\Telerik.Windows.Core.Cloud.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Core.Cloud.Everlive" Condition=" '$(Platform)' == 'ARM' ">
+      <HintPath>lib\ARM\Telerik.Windows.Core.Cloud.Everlive.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Core.Cloud.Everlive" Condition=" '$(Platform)' == 'x86' ">
+      <HintPath>lib\x86\Telerik.Windows.Core.Cloud.Everlive.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Cloud" Condition=" '$(Platform)' == 'ARM' ">
+      <HintPath>lib\ARM\Telerik.Windows.Controls.Cloud.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Cloud" Condition=" '$(Platform)' == 'x86' ">
+      <HintPath>lib\x86\Telerik.Windows.Controls.Cloud.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Data">
+      <HintPath>lib\Telerik.Windows.Data.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="lib\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>
