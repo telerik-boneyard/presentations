@@ -1,0 +1,33 @@
+.activity-avatar {
+    width: 50;
+    height: 50;
+    margin: 20 15;
+}
+
+.activity-user {
+    color: #FFFFFF;
+    font-size: 12;
+    vertical-align: center;
+}
+
+.margin-right {
+    margin:0 20 0 0
+}
+
+.margin {
+    margin: 20
+}
+
+.activity-text {
+    margin: 30;
+    font-size: 12;
+}
+
+.comment-text {
+    font-size: 13;
+}
+
+.comment-name {
+    color: #E91E63;
+    font-size: 13;
+}

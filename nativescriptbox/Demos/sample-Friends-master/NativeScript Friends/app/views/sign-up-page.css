@@ -1,0 +1,18 @@
+#gender {
+    margin:15 25;
+    font-size: 15;
+    horizontal-align: left;
+}
+
+#birth-date {
+    margin:15 25;
+    font-size: 15;
+    horizontal-align: left;
+}
+
+.arrow-icon {
+    width: 20;
+    height: 20;
+    horizontal-align: left;
+}
+

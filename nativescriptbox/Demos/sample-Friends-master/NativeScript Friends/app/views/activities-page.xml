@@ -1,0 +1,38 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatedTo="pageNavigatedTo">
+    <GridLayout rows="auto, auto, *">
+        <GridLayout cssClass="header-container" columns="auto, *, auto">
+            <Label text="LOGOUT" tap="logout" cssClass="header-text align-left ios" />
+            <Image src="~/res/logout_new.png" tap="logout" cssClass="header-button align-left android"/>
+            <Label text="Activities" cssClass="header-context-label align-left android" col="1"/> 
+            <Label text="Friends" colSpan="3" cssClass="header-context-label align-center ios" />
+            <Label text="ADD" tap="addActivity" cssClass="header-text align-right ios" col="2"/>
+        </GridLayout>
+        <StackLayout cssClass="horizontal-line ios" row="1"></StackLayout>
+        <ListView id="activitiesView" items="{{ activities }}" itemTap="onActivityTap" row="2">
+            <ListView.itemTemplate>
+                <GridLayout columns="auto, *" >
+                    <StackLayout>
+                        <Image imageSource="{{ avatarImageSource || defaultAvatarImageSource }}" stretch="fill" cssClass="activity-avatar"/>
+                    </StackLayout>
+                    <StackLayout cssClass="activity-container" col="1">
+                        <Label cssClass="activity-name">
+                            <Label.formattedText>
+                                <FormattedString>
+                                  <FormattedString.spans>
+                                    <Span text="{{ userName }}" fontAttributes="Bold" />
+                                  </FormattedString.spans>
+                                </FormattedString>
+                              </Label.formattedText>
+                        </Label>
+                        <Label text="{{ Text }}" cssClass="activity-summary" textWrap="true"/>
+                        <Image imageSource="{{ pictureImageSource || '' }}" cssClass="activity-picture android" stretch="aspectFit" />
+                        <Image imageSource="{{ pictureImageSource || '' }}" cssClass="activity-picture ios" stretch="aspectFit" height="{{ hasPicture ? pictureImageHeight : 0 }}" />
+                        <Label text="{{ CreatedAt, CreatedAt | dateConverter('DD.MM.YYYY') }}" cssClass="activity-date"/>
+                  </StackLayout>
+                </GridLayout> 
+            </ListView.itemTemplate>  
+        </ListView>
+        <ActivityIndicator rowSpan="3" busy="{{ isLoading }}" cssClass="activity-indicator" />
+        <Image src="~/res/add.png" rowSpan="3" id="add-activity" tap="addActivity" stretch="fill" cssClass="fab fabContainer android" />
+    </GridLayout>
+</Page>

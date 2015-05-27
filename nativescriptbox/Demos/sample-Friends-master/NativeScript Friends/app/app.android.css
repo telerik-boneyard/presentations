@@ -1,0 +1,79 @@
+Page {
+    background-color: #ffffff;
+}
+
+.ios {
+    visibility: collapsed;
+}
+
+.header-container {
+    background-color: #1976d2;
+}
+
+.align-right {
+    horizontal-align: right;
+}
+
+.align-left {
+    horizontal-align: left;
+}
+
+.align-center {
+    horizontal-align: center;
+}
+
+.align-top {
+    vertical-align: top;
+}
+
+.header-button {
+    height: 20;
+    width: 20;
+    margin: 20;
+}
+
+.header-context-label {
+    vertical-align: middle;
+    font-size: 20;
+    margin:17 20 20 0;
+    color: #ffffff;
+}
+
+.text-input {
+    margin: 10 15 10 15;
+    padding: 5;
+}
+
+.signup-button{
+    margin:0 15 15 15;
+    background-color: #1976d2;
+    color: #ffffff; 
+}
+
+.login-button {
+    margin:15 15 15 15;
+    background-color: #e91e63;
+    color: #ffffff;
+}
+
+.activity-indicator
+{
+    vertical-align: center;
+    horizontal-align: center;
+}
+
+.fab {
+    width: 60;
+    height: 60;
+    horizontal-align: right;
+    margin: 20;
+}
+
+.fabContainer
+{
+    vertical-align: bottom;
+    horizontal-align: right;
+
+}
+
+

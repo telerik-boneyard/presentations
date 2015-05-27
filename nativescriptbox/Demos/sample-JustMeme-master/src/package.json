@@ -1,0 +1,8 @@
+{
+  "main": "app.js",
+  "dependencies": {
+    "lodash": "^3.8.0",
+    "marked": "^0.3.3",
+    "nativescript-social-share": "^0.1.1"
+  }
+}

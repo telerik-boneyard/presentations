@@ -1,0 +1,20 @@
+{
+	"name": "tns-samples-cuteness.io",
+	"main": "app.js",
+	"version": "1.0.0",
+	"author": "Telerik <support@telerik.com>",
+	"description": "Nativescript cuteness.io sample application",
+	"license": "BSD",
+	"keywords": [
+		"telerik",
+		"mobile",
+		"nativescript",
+		"{N}",
+		"tns",
+		"appbuilder",
+		"sample"
+	],
+	"repository": {
+		"url": "https://github.com/NativeScript/NativeScript/commit/2dd2bc006d8c9dee3dc90f7fbccdeb09b4e8c0da"
+	}
+}

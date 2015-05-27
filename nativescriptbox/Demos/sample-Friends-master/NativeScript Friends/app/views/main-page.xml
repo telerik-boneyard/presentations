@@ -1,0 +1,15 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
+    <GridLayout>
+        <StackLayout>
+            <Image src="~/res/friends.png" cssClass="app-logo" />
+            <TextField id="username" cssClass="text-input" hint="e-mail" keyboardType="email" text="{{ email }}"/>
+            <TextField id="password" cssClass="text-input" hint="password" secure="true" text="{{ password }}"/>
+            <Button text="Log in" id="login" cssClass="login-button" tap="logIn" />
+            <Label text="Don't have an account yet?" cssClass="sub-title" />
+            <Button text="Sign up for free" id="signup" tap="navigateRegister" cssClass="signup-button"/>
+        </StackLayout>
+        <GridLayout visibility="{{ isLoading ? 'visible' : 'collapsed' }}" verticalAlignment="stretch" horizontalAlignment="stretch" >
+            <ActivityIndicator busy="{{ isLoading }}" cssClass="activity-indicator" />
+        </GridLayout>
+    </GridLayout>
+</Page>

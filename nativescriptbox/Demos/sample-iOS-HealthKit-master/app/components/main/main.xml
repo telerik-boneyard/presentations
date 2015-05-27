@@ -1,0 +1,9 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
+  <GridLayout>
+    <StackLayout>
+      <Button text="Get Weight" tap="getWeightButtonTap" />
+      <TextField id="weightTextView" hint="enter weight" keyboardType="number" />
+      <Button text="Set Weight" tap="setWeightButtonTap" />
+    </StackLayout>
+  </GridLayout>
+</Page>

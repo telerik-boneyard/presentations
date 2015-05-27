@@ -1,0 +1,7 @@
+{
+	"name": "tns-samples-TelerikNEXT",
+	"main": "app.js",
+	"version": "0.4.2",
+	"description": "Nativescript TelerikNEXT sample application",
+	"license": "BSD"
+}

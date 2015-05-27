@@ -1,0 +1,25 @@
+{
+  "ProjectName": "NativeScript Friends",
+  "ProjectGuid": "63a704c4-a481-4b2d-9c18-26fc0fc836ea",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.NativeScriptFriends",
+  "DisplayName": "NativeScript Friends",
+  "Author": "",
+  "Description": "NativeScript Friends",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{F0A65104-D4F4-4012-B799-F612D75820F6}",
+  "AndroidPermissions": [],
+  "DeviceOrientations": [
+    "Portrait"
+  ],
+  "AndroidHardwareAcceleration": "false",
+  "iOSStatusBarStyle": "Default",
+  "FrameworkVersion": "0.10.0",
+  "Framework": "NativeScript"
+}

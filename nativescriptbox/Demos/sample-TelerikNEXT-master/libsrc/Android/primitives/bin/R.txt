@@ -1,0 +1,34 @@
+int anim drawer_slide_in_top 0x7f030000
+int anim drawer_slide_out_top 0x7f030001
+int attr fillViewport 0x7f010003
+int attr pointerFill 0x7f010002
+int attr pointerMargin 0x7f010001
+int attr pointerSize 0x7f010000
+int attr radScrollViewStyle 0x7f010005
+int attr scrollMode 0x7f010004
+int color black 0x7f040000
+int color white 0x7f040001
+int dimen legend_stroke_width 0x7f060000
+int id chart_data_point_content_container 0x7f080006
+int id chart_tooltip_category 0x7f080003
+int id chart_tooltip_pointer 0x7f080005
+int id chart_tooltip_value 0x7f080004
+int id horizontal 0x7f080000
+int id tooltip_content_container 0x7f080002
+int id vertical 0x7f080001
+int layout default_tooltip_content 0x7f020000
+int layout tooltip_container 0x7f020001
+int layout trial_message 0x7f020002
+int string trial_message 0x7f050000
+int string trial_message_caption 0x7f050001
+int style RadScrollViewStyle 0x7f070000
+int style RadScrollViewTheme 0x7f070001
+int[] styleable PointerLayout { 0x7f010000, 0x7f010001, 0x7f010002 }
+int styleable PointerLayout_pointerFill 2
+int styleable PointerLayout_pointerMargin 1
+int styleable PointerLayout_pointerSize 0
+int[] styleable RadScrollView { 0x7f010003, 0x7f010004 }
+int styleable RadScrollView_fillViewport 0
+int styleable RadScrollView_scrollMode 1
+int[] styleable RadScrollViewTheme { 0x7f010005 }
+int styleable RadScrollViewTheme_radScrollViewStyle 0

@@ -1,0 +1,34 @@
+.activity-container {
+    margin: 10;
+}
+
+.activity-name {
+    color: #E91E63;
+    margin: 8 0;
+}
+
+.activity-summary {
+    margin: 5 0;
+    font-size: 13;
+    min-height: 10;
+}
+
+.activity-date {
+    margin: 5 5 5 0;
+    color: #B0B0B0;
+    font-size: 13;
+}
+
+.activity-avatar {
+    width: 50;
+    height: 50;
+    margin: 20 10 20 15;
+    vertical-align: top;
+}
+
+.activity-picture {
+    margin: 10 0;
+    vertical-align: top;
+}
+
+

@@ -1,0 +1,238 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd"
+  loaded="pageLoaded" xmlns:tsb="TelerikUI/side-bar">
+  <tsb:SideBar id="sideBar">
+    <tsb:SideBar.slideContent>
+      <GridLayout rows="*, auto">
+        <StackLayout style="background-color: #053140;">
+          <Image src="res://logo" cssClass="slide-out-img" stretch="none" />
+          <Button tap="selectView" tag="0" cssClass="{{ selectedViewIndex === 0 ? 'slide-out-btn' : 'slide-out-btn-selected' }}" text="My agenda" />
+          <Button tap="selectView" tag="1" cssClass="{{ selectedViewIndex === 1 ? 'slide-out-btn' : 'slide-out-btn-selected' }}" text="All sessions" />
+          <Button tap="selectView" tag="2" cssClass="{{ selectedViewIndex === 2 ? 'slide-out-btn' : 'slide-out-btn-selected' }}" text="Workshop Hackaton" />
+          <Button tap="selectView" tag="3" cssClass="{{ selectedViewIndex === 3 ? 'slide-out-btn' : 'slide-out-btn-selected' }}" text="What's NEXT" />
+          <Button tap="selectView" tag="4" cssClass="{{ selectedViewIndex === 4 ? 'slide-out-btn' : 'slide-out-btn-selected' }}" text="Sponsors" />
+        </StackLayout>
+        <StackLayout style="background-color: #053140;" row="1">
+          <Label tap="goToUrl" tag="http://www.nativescript.org" cssClass="slide-out-btn-about">
+            <Label.formattedText>
+              <FormattedString>
+                <FormattedString.spans>
+                  <Span text="Created with " />
+                  <Span text="NativeScript" fontAttributes="Bold"  />
+                </FormattedString.spans>
+              </FormattedString>
+            </Label.formattedText>
+          </Label>
+        </StackLayout>
+      </GridLayout>
+    </tsb:SideBar.slideContent>
+
+    <tsb:SideBar.mainContent>
+      <GridLayout rows="auto, *">
+        <!-- Header -->
+        <StackLayout cssClass="page-header">
+          <GridLayout cssClass="action-bar darker">
+            <GridLayout cssClass="action-wrap" tap="showSlideout" columns="auto" horizontalAlignment="left">
+              <Image stretch="none" cssClass="icon-image" src="res://ic_menu"/>
+            </GridLayout>
+            <Label text="{{ actionBarTitle }}" cssClass="action-bar-title" />
+          </GridLayout>
+
+          <GridLayout cssClass="darker" visibility="{{ isSessionsPage ? 'visible' : 'collapsed' }}">
+            <SegmentedBar selectedBackgroundColor="#fac950" selectedIndex="{{ selectedIndex }}">
+              <SegmentedBar.items>
+                <SegmentedBarItem title="MAY 3" />
+                <SegmentedBarItem title="MAY 4" />
+                <SegmentedBarItem title="MAY 5" />
+              </SegmentedBar.items>
+            </SegmentedBar>
+          </GridLayout>
+          <Label cssClass="page-title" horizontalAlignment="center" margin="15" visibility="{{ isSessionsPage ? 'visible' : 'collapsed' }}">
+            <Label.formattedText>
+              <FormattedString>
+                <FormattedString.spans>
+                  <Span text="{{ dayHeader }}" fontAttributes="Bold" />
+                </FormattedString.spans>
+              </FormattedString>
+            </Label.formattedText>
+          </Label>
+        </StackLayout>
+
+        <!-- Sessions Views -->
+        <GridLayout  rows="auto, *" row="1" visibility="{{ isSessionsPage ? 'visible' : 'collapsed' }}">
+          <!-- Search -->
+          <SearchBar text="{{ search }}" hint="Search" cssClass="search" textFieldBackgroundColor="white" id="search"/>
+
+          <!-- List -->
+          <ListView items="{{ sessions }}" row="1" separatorColor="#fac950" itemTap="selectSession">
+            <ListView.itemTemplate>
+              <GridLayout columns="auto, *" cssClass="{{ isBreak ? 'break-row' : 'list-view-row' }}">
+
+                <GridLayout visibility="{{ isBreak ? 'collapsed' : 'visible' }}"
+                  cssClass="favourite-wrap" tap="toggleFavorite" columns="auto" rows="auto">
+                  <Image stretch="none" cssClass="icon-image"
+                    src="{{ favorite ? 'res://ic_add_to_fav_1' : 'res://ic_add_to_fav' }}" />
+                </GridLayout>
+
+                <StackLayout col="1">
+
+                  <Label cssClass="info-orange">
+                    <Label.formattedText>
+                      <FormattedString>
+                        <FormattedString.spans>
+                          <Span text="{{ range }}" fontAttributes="Bold" />
+                        </FormattedString.spans>
+                      </FormattedString>
+                    </Label.formattedText>
+                  </Label>
+
+                  <Label text="{{ title }}" textWrap="true" cssClass="info-bigger"/>
+
+                  <Label visibility="{{ room ? 'visible' : 'collapsed' }}" text="{{ room }}" cssClass="info-orange" />
+
+                </StackLayout>
+
+              </GridLayout>
+            </ListView.itemTemplate>
+          </ListView>
+
+          <ActivityIndicator busy="{{ isLoading }}" row="1" horizontalAlignment="center" verticalAlignment="center" />
+        </GridLayout>
+
+        <!-- Workshop View -->
+        <StackLayout row="1" visibility="{{ selectedViewIndex === 2 ? 'visible' : 'collapsed'}}" cssClass="content-offset">
+          <Label cssClass="info-page-header" textWrap="true" text="Come check out the TelerikNEXT Mobile Hackathon" />
+          <Label cssClass="info-orange" textWrap="true" >
+            <Label.formattedText>
+              <FormattedString>
+                <FormattedString.spans>
+                  <Span text="Sunday, May 3rd from 6:30pm-10:30pm" fontAttributes="Bold" />
+                </FormattedString.spans>
+              </FormattedString>
+            </Label.formattedText>
+          </Label>
+
+          <Label cssClass="info" textWrap="true" >
+            <Label.formattedText>
+              <FormattedString>
+                <FormattedString.spans>
+                  <Span text="
+As always, we'll make it worth your while. You will:
+                        
+1) Build your first (or tenth) mobile app and have fun doing it
+
+2) Enjoy free food, drinks and software licenses, all while learning new skills
+
+3) Get prizes, with" />
+                  <Span text=" winners every 20 minutes" fontAttributes="Bold"/>
+                  <Span text="
+                                                                                           
+5) Ask questions and meet our hackathon expert engineers
+
+6) Get " />
+                  <Span text=" FREE code" fontAttributes="Bold"/>
+                  <Span text=" licenses for 6 months!" />
+                  <Span text="
+                        
+Space is limited, so be sure to pick up your entry pass by stopping by at the Registration desk on Sunday between the hours of 4:00 p.m. - 6:00 p.m."
+                        foregroundColor="#A17201" fontAttributes="Bold"/>
+                </FormattedString.spans>
+              </FormattedString>
+            </Label.formattedText>
+          </Label>
+
+        </StackLayout>
+
+        <!-- What's NEXT View -->
+        <StackLayout row="1" visibility="{{ selectedViewIndex === 3 ? 'visible' : 'collapsed'}}" cssClass="content-offset">
+          <Label cssClass="info-orange">
+            <Label.formattedText>
+              <FormattedString>
+                <FormattedString.spans>
+                  <Span text="TAKE THE SURVEY" fontAttributes="Bold" />
+                </FormattedString.spans>
+              </FormattedString>
+            </Label.formattedText>
+          </Label>
+          <Label cssClass="info" tap="goToUrl" tag="https://www.surveymonkey.com/s/5NNJRM5">
+            <Label.formattedText>
+              <FormattedString>
+                <FormattedString.spans>
+                  <Span text="TelerikNEXT EVENT SURVEY" fontAttributes="Bold" />
+                </FormattedString.spans>
+              </FormattedString>
+            </Label.formattedText>
+          </Label>
+
+          <StackLayout cssClass="horizontal-line"/>
+          <Label cssClass="info-orange">
+            <Label.formattedText>
+              <FormattedString>
+                <FormattedString.spans>
+                  <Span text="RAFFLE INFORMATION" fontAttributes="Bold" />
+                </FormattedString.spans>
+              </FormattedString>
+            </Label.formattedText>
+          </Label>
+          <Label cssClass="info" textWrap="true" tap="goToUrl" tag="{{ info_raffle_url }}">
+            <Label.formattedText>
+              <FormattedString>
+                <FormattedString.spans>
+                  <Span text="{{ info_raffle }}" fontAttributes="Bold" />
+                </FormattedString.spans>
+              </FormattedString>
+            </Label.formattedText>
+          </Label>
+
+          <StackLayout cssClass="horizontal-line"/>
+          <Label cssClass="info-orange">
+            <Label.formattedText>
+              <FormattedString>
+                <FormattedString.spans>
+                  <Span text="CERTIFICATION PROGRAM" fontAttributes="Bold" />
+                </FormattedString.spans>
+              </FormattedString>
+            </Label.formattedText>
+          </Label>
+          <Label cssClass="info" textWrap="true" tap="goToUrl" tag="{{ info_certification_url }}">
+            <Label.formattedText>
+              <FormattedString>
+                <FormattedString.spans>
+                  <Span text="{{ info_certification }}" fontAttributes="Bold" />
+                </FormattedString.spans>
+              </FormattedString>
+            </Label.formattedText>
+          </Label>
+
+          <StackLayout cssClass="horizontal-line"/>
+          <Label cssClass="info-orange">
+            <Label.formattedText>
+              <FormattedString>
+                <FormattedString.spans>
+                  <Span text="FIND US HERE" fontAttributes="Bold" />
+                </FormattedString.spans>
+              </FormattedString>
+            </Label.formattedText>
+          </Label>
+          <GridLayout columns="*,*,*,*" marginTop="12">
+            <Image src="res://facebook" stretch="none" col="0" tap="goToUrl" tag="https://www.facebook.com/Telerik"/>
+            <Image src="res://twitter" stretch="none" col="1" tap="goToUrl" tag="https://twitter.com/telerik"/>
+            <Image src="res://linkedin" stretch="none" col="2" tap="goToUrl" tag="https://www.linkedin.com/company/telerik"/>
+            <Image src="res://google" stretch="none" col="3" tap="goToUrl" tag="https://plus.google.com/+telerik/posts"/>
+          </GridLayout>
+        </StackLayout>
+
+        <!-- Sponsors -->
+        <StackLayout row="1" visibility="{{ selectedViewIndex === 4 ? 'visible' : 'collapsed'}}" cssClass="content-offset">
+
+          <Image src="res://sponsor_american_eagle" stretch="none"/>
+          <Label cssClass="info" textWrap="true" text="Americaneagle.com
+" />
+          <Image src="res://sponsor_theportal_connector" stretch="none"/>
+          <Label cssClass="info" textWrap="true" text="The Portal Connector
+for Dynamics CRM" />
+
+        </StackLayout>
+      </GridLayout>
+    </tsb:SideBar.mainContent>
+  </tsb:SideBar>
+</Page>

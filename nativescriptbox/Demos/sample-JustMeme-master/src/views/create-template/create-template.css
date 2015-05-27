@@ -1,0 +1,11 @@
+Image {
+	height: 200;
+	margin: 25;
+}
+
+Button {
+	background-color: #5BE600;
+	margin: 10;
+	color: black;
+}
+

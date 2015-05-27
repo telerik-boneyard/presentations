@@ -1,0 +1,11 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd"
+	loaded="load"
+	cssClass="splashPage">
+
+		<GridLayout rows="*">
+
+		<Image src="{{ imageSource }}" stretch="aspectFill" />
+		<Label text="{{ 'v.' + appVersion }}"/>
+
+	</GridLayout>
+</Page>

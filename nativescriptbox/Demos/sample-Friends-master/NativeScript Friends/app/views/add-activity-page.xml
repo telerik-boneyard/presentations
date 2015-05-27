@@ -1,0 +1,15 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatedTo="pageNavigatedTo">
+    <GridLayout rows="auto,auto,auto, *">
+        <GridLayout cssClass="header-container" columns="auto, *, auto">
+            <Label text="CANCEL" tap="backButtonClicked" cssClass="header-text align-left ios" />
+            <Image src="~/res/back-light.png" tap="backButtonClicked" cssClass="header-button align-left android"/>
+            <Label text="Post" cssClass="header-context-label align-left android" col="1"/> 
+            <Label text="Friends" colSpan="3" cssClass="header-context-label align-center ios" />
+            <Label text="DONE" cssClass="header-text align-right ios" tap="addActivity" col="2"/>
+        </GridLayout>
+        <StackLayout cssClass="horizontal-line ios" row="1"></StackLayout>
+        <TextView text="{{ activity || '' }}" id="add-activity-text" row="2" textWrap="true" cssClass="text-input" />
+        <Image rowSpan="4" src="~/res/done.png" stretch="fill" id="add-activity" tap="addActivity" cssClass="fab fabContainer android" />
+        <ActivityIndicator rowSpan="4" busy="{{ isLoading }}" cssClass="activity-indicator" />
+    </GridLayout>
+</Page>
