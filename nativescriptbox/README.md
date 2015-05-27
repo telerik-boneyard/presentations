@@ -3,7 +3,7 @@ Telerik NativeScript
 
 ### Presentation-In-a-Box .. You'll enjoy this.
 
-Everything you need to present on Telerik NativeScript - nicely wrapped up in a box. Showcases {N} framework features and highlights benefits for an easy conversation with developers. Polished decks are available in Web, PDF or PowerPoint formats - use whichever fits your needs.
+Everything you need to present on Telerik NativeScript - nicely wrapped up in a box. Showcases {N} framework features and highlights benefits for an easy conversation with developers. Polished decks are available in Web, PDF or PowerPoint formats - use whichever fits your needs. Demos include several sample apps, interactive tutorials and longer workshop materials.
 
 
 ### /// Have fun
