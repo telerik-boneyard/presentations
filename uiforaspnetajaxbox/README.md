@@ -5,6 +5,8 @@ Telerik UI for ASP.NET Ajax
 
 Everything you need to present on Telerik UI for ASP.NET Ajax - nicely wrapped up in a box. Showcases framework features and highlights UI widgets for an easy conversation with developers.
 
+<iframe src="//slides.com/telerikdevrel/uiforaspnetajax/embed" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
 ### /// 20 Minute Cameo
 
 If you have a short amount of time to do a lightning talk on Telerik UI for ASP.NET Ajax, here’s what we think are the most important points to hit:
